@@ -38,6 +38,8 @@ Note:
 
 ---
 
+![IMAGE](assets/img/git-xkcd.png)
+
 ---
 
 ## GitFlow

@@ -6,6 +6,10 @@
 
 ![IMAGE](assets/img/tree-trunk.png)
 
+Note:
+
+Trunk Based Dev (or TBD) is a software dev methodology where developers commit straight to a master branch.
+
 ---
 
 ## TL;DR

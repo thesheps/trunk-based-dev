@@ -40,17 +40,27 @@ Note:
 
 ![IMAGE](assets/img/git-xkcd.png)
 
+Note:
+
+Love a relevant XKCD!
+
 ---
 
 ## GitFlow
 
 ![IMAGE](assets/img/git-flow.png)
 
+Note:
+
+- Here we have a branch called master which represents what's currently live.
+- Develop is a branch which runs alongside master and has features merged into it.
+- From develop we have separate feature branches which are worked on in isolation and merged up when complete via PRs.
+
 ---
 
 ## What Problem Does it Solve?
 
-- Enables parallel development
+- Enables parallel development of features
 - Enables collaboration using PRs
 - Provides a "Staging Area" for release
 - Supports hot-fixes
@@ -75,9 +85,10 @@ Note:
 Parallel dev is great, but only if you integrate frequently. Here, branches might span days.
 
 - The longer the branch, the longer the feedback in a production-like environment.
-- The longer the branch, the lower the amount of change visibility
+- The longer the branch, the lower the amount of change visibility on other features. We lose an early integration point for how well these features may play together.
 - The longer they deviate from develop, the harder to reconcile.
-- Results in delayed features.
+
+Ultimately these all result in the delay of releasing value to our end user.
 
 ---
 
@@ -93,7 +104,7 @@ One of the common patterns associated with GitFlow, only deploy when "ready" via
 
 - As we're building anew for every branch, how can you be confident that your artifacts are the same?
 - Hotfixes to master resulting in develop/master getting out of step.
-- The cognitive load of trying to unpick branches is high.
+- There is a cognitive load of trying to unpick branches is high.
 
 ---
 
@@ -143,9 +154,10 @@ Note:
 Note:
 
 - Every commit gets deployed to a test environment _quickly_.
-- Every commit must be integrated locally before pushing.
+- Every commit must be integrated locally before pushing rather than fire and forget.
 - Everyone is working on the same branch, more visibility of changes.
 - With trunk-based development, you build once and promote.
+- Ultimately by working on processes that allow code to integrate early, you reduce developer toil and the amount of time it takes to physically get code into a production-like environment.
 
 ---
 
@@ -156,7 +168,7 @@ Note:
 
 Note:
 
-- Early feedback is better than late. Pair programming gives us this.
+- Early feedback is better than late. Pair programming, mob programming, group code review sessions, brown bags can give us this and ahead of time.
 - If work isn't ready to be released it can easily be hidden behind a feature flag/switch/toggle. We can dig into this shortly!
 
 ---
@@ -167,7 +179,7 @@ Note:
 
 ---
 
-## Git Etiquette (**#Gitiquette**)
+## ~~Git Etiquette~~ (**#Gitiquette**)
 
 > Just because there are no branches, doesn't mean there are no conflicts!
 
@@ -177,6 +189,8 @@ Note:
 - Working on the same branch means that there will be times that concurrent change needs to be orchestrated.
 - There are some decisions that need to be made for the team!
 
+Next we're going to look at some common questions.
+
 ---
 
 ## Merge or Rebase?
@@ -185,8 +199,10 @@ Note:
 
 Note:
 
+Following TBD we're going to be coordinating code between developers more frequently. There are different ways to manage this.
+
 - The question of merge/rebase is a question of maintaining commit context or favouring a linear timeline.
-- When working with trunk-based development the "context" of short-lived branches and merge history is largely redundant, but this should be at the discretion of the team.
+- When working with trunk-based development the "context" of short-lived branches and merge history is largely redundant, but this should be at the discretion of the team and something we should discuss.
 
 ---
 

@@ -38,8 +38,6 @@ Note:
 
 ---
 
-![IMAGE](assets/img/git.png)
-
 ---
 
 ## GitFlow
